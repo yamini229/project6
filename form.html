@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>elogin</title>
+    <style>
+     h1{
+        color:white;
+        font-style:oblique ;
+     }   
+       
+    .main{
+        
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-top: 3vw;
+        margin-left: 17vw;
+        margin-right: 17vw;
+        margin-bottom: 3vw;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-weight: bolder;
+
+    }
+    .login{
+        background-color:rgba(240, 248, 255, 0.473);
+        padding: 5vw;
+    }
+    button{
+        width: 10vw;
+        border-radius: 3vw
+    }
+    #bg-video{
+    position: fixed;
+    top:50%;
+    left:50%;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    background-size: cover;
+    height: auto;
+    width: auto;
+    transform: translate(-50%,-50%);
+}
+
+    </style>
+</head>
+<script>
+    // User Validations
+function loginValidation() {
+        // Ramesh
+var uname = document.myform.username.value;
+         //Ramesh@123
+var password = document.myform.password.value;
+        if(uname==null || uname=="") {
+          alert("Name cant be blank")
+          return false;  
+       } else if (password.length<6){
+          alert("Password Must be 6 letters")
+          return false;
+       }  
+       return true                 
+    }   
+ </script>
+<body>
+    <center>
+    <video autoplay muted loop id="bg-video">
+        <source src="video.mp4 (2).mp4" type="video/mp4">
+        your browser doesn't support HTML5 video.
+        </video>
+        <div class="main">
+            <form name="myform" action="LoginSuccess.html" 	onsubmit="return loginValidation(this)">
+        
+                <div class="login" >
+                    <h1 style="display: flex; justify-content: center; flex-direction: row; margin-top: 4%;">login here!</h1><br>
+                <h3>Enter your login credintials</h3><br>
+            
+                    
+                <font size:"3"> Username :<input type="text" placeholder="*username/email" name="username"><br> </font size> <br>
+                
+                <font size:"3"> Password :<input type="password" placeholder="*password" name="password"><br></font size><br>
+                <button>login</button><br>
+                 <br>
+                 <br>
+                <a href="registration.html">Not registered? Create an account</a></form>
+            </div>
+
+            </div>
+            <div class="additional-links">
+                <a href="forgot.html">Forgot password?</a>
+                <span> | </span>
+                <a href="registration.html">Don't have an account? Create one</a>
+                </div>
+            
+        </body>
+            </form>
+        </body>
+       </html>

@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Card</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .card {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  padding: 15px;
+}
+
+.content h2 {
+  margin-top: 0;
+}
+
+.price {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="image">
+      <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRZLDNDUU3KCY5KB3MGbuSbeGnuoHGJiQ1I5j_JLVfsFyRm7PJT__ViPYgeZJMFtERrm6SIMw-SDhicfIMIyZJBmoM5KxkX7vThIqB0Pz2r&usqp=CAE" alt="Product Image">
+    </div>
+    <div class="content">
+      <h2>Product Name</h2>
+      <p>Description of the product goes here...</p>
+      <span class="price">$XX.XX</span>
+    </div>
+  </div>
+</body>
+</html>

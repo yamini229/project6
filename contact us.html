@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion Queries Form</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f8f8;
+  background-image:url ("contact.jpg");
+}
+
+.container {
+  display: flex;
+  justify-content: -100px;
+  align-items: center;
+  height: 100vh;
+}
+
+.queries-box {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  appearance: none;
+}
+
+button {
+  background-color: #ff4d6a;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff3352;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+  </style>
+</head>
+<body>
+  <body background="contact.jpg"></body>
+  <div class="container">
+    <div class="queries-box">
+      <h2>Have a Question?</h2>
+      <form id="queries-form">
+        <div class="form-group">
+          <input type="text" id="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <textarea id="message" placeholder="Your Message" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="query-type">Query Type:</label>
+          <select id="query-type" required>
+            <option value="" disabled selected>Select Type</option>
+            <option value="product-problem">Product Problem</option>
+            <option value="send-message">Send Message</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
